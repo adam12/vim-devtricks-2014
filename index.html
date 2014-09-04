@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Intro to Vim</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Rainbow stylesheet -->
+  <link rel="stylesheet" media="screen" href="rainbow/sunburst.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/adam12.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+    <!-- Begin slides. Just make elements with a class of slide. -->
+    <section class="slide">
+      <h1><img src="vim_logo.png" style="margin-bottom: 0;"></h1>
+    </section>
+
+
+    <section class="slide">
+      <h2>How do I exit vim?</h2>
+
+      <p>
+        I'll tell you at the end of this presentation!
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Why Vim?</h2>
+
+      <ul>
+        <li>Cross platform</li>
+        <li>Available everywhere</li>
+        <li>Extremely lightweight</li>
+        <li>Great plugin ecosystem</li>
+        <li>Battle tested!</li>
+        <li>Well documented</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Some Vim Features</h2>
+
+      <ul>
+        <li>Completion</li>
+        <li>Comparison and merging of files (vimdiff)</li>
+        <li>Extended regular expressions</li>
+        <li>Various scripting language support (Perl, Python, Ruby, Tcl, Lua)</li>
+        <li>Graphical user interface (gvim)</li>
+        <li>Mouse interaction (with and without gui)</li>
+        <li>Folding</li>
+        <li>Editing of compressed or archived files in gzip, bzip2, zip, and tar formats</li>
+        <li>Editing of files over network protocols such as SSH, FTP, HTTP</li>
+        <li>Session state preservation</li>
+        <li>Spell checking</li>
+        <li>Split and tabbed windows</li>
+        <li>Unicode and multi-language support</li>
+        <li>Syntax highlighting</li>
+        <li>Search and position cursor histories</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Some Vim History</h2>
+
+      <ul>
+        <li>Written by Bram Moolenaar</li>
+        <li>First released publicly in 1991 (22 years ago!)</li>
+        <li>Originally released for the Amiga</li>
+        <li>Voted most popular editor by Linux Journal readers in 2006</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Learning Vim</h2>
+
+      <ul>
+        <li>Disable arrow keys!</li>
+        <li>vimtutor</li>
+        <li>:help</li>
+        <li>Vim Casts</li>
+        <li>Vim Adventures</li>
+        <li>Muscle memory (it gets easier!)</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Vim tutor</h2>
+      <img src="vimtutor.png">
+    </section>
+
+    <section class="slide">
+      <h2>Vim Adventures!</h2>
+
+      <iframe src="http://vim-adventures.com" height="600"></iframe>
+    </section>
+
+    <section class="slide">
+      <h2>Vim script (VimL)</h2>
+
+      <ul>
+        <li>Used to extend Vim</li>
+        <li>Fairly obscure</li>
+        <li>Only a few people truly understand it <em>(IMHO)</em></li>
+        <li>:help usr_41</li>
+      </ul>
+
+      <p>Vimscript is the most common plugin format</p>
+      <p>You're not just limited to Vimscript - Ruby, Tcl, Lua, Perl, Python</p>
+    </section>
+
+    <section class="slide">
+      <h2>Vim Varients</h2>
+
+      <ul>
+        <li>MacVim</li>
+        <li>Cream</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Supported Platforms</h2>
+
+      <ul>
+        <li>Atari MiNT</li>
+        <li>BeOS</li>
+        <li>DOS</li>
+        <li>Microsoft Windows 95/98/Me/NT/2000/XP/Server 2003/Vista/Server 2008/7/8</li>
+        <li>IBM OS/2 and OS/390</li>
+        <li>MorphOS</li>
+        <li>OpenVMS</li>
+        <li>QNX</li>
+        <li>RISC OS</li>
+        <li>Unix</li>
+        <li>Linux</li>
+        <li>BSD</li>
+        <li>Mac OS</li>
+        <li>Android <em>(independent port)</em></li>
+        <li>iOS <em>(independent port)</em></li>
+      </ul>
+    </section>
+
+    <section class="slide inverted">
+      <h1>:wq!</h1>
+    </section>
+
+    <section class="slide">
+      <h2>More Information</h2>
+
+      <ul class="more-information">
+        <li>
+          <a href="http://vim-adventures.com/" target="_new">Vim Adventures</a>
+        </li>
+
+        <li>
+          <a href="http://vimcasts.org" target="_new">Vimcasts</a>
+        </li>
+
+        <li>
+          <a href="http://github.com/adam12/dotfiles" target="_new">My dotfiles</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Thank You</h2>
+
+      <dl>
+        <dt>Github</dt>
+        <dd><a href="http://github.com/adam12">github.com/adam12</a></dd>
+
+        <dt>Twitter</dt>
+        <dd><a href="http://twitter.com/adamrdaniels">@adamrdaniels</a></dd>
+
+        <dt>Sourcecode</dt>
+        <dd><a href="http://github.com/adam12/ansible-devtricks-2014">github.com/adam12/ansible-devtricks-2014</a></dd>
+      </dl>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<script src="rainbow/rainbow-custom.min.js"></script>
+<script src="pretty-pre.js"></script>
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+
+  $(function() {
+    prettyPre.strip("pre > code");
+
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Managed by Ansible. DO NOT EDIT.
+
+<VirtualHost *:80>
+  DocumentRoot {{docroot}}
+
+  <Directory "{{docroot}}">
+    Order allow,deny
+    Allow from all
+    AllowOverride FileInfo All
+    Require all granted
+  </Directory>
+</VirtualHost>

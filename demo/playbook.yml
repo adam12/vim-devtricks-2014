@@ -1,0 +1,25 @@
+---
+- hosts: all
+  vars:
+    docroot: /vagrant/public_html
+
+  tasks:
+    - apt: update_cache=yes
+
+    - name: Install Apache
+      apt: pkg=apache2 state=present
+
+    - name: Ensure Apache is running
+      service: name=apache2 state=running
+
+    - name: Install PHP5
+      apt: pkg=php5 state=present
+      notify: restart Apache
+
+    - name: Configure Apache VirtualHost
+      template: src=vhost.j2 dest=/etc/apache2/sites-enabled/000-default.conf
+      notify: restart Apache
+
+  handlers:
+    - name: restart Apache
+      service: name=apache2 state=restarted
