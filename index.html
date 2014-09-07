@@ -194,6 +194,94 @@
       <iframe src="http://vim-adventures.com" height="600"></iframe>
     </section>
 
+    <section class="slide inverted">
+      <h1>Using Vim</h1>
+    </section>
+
+    <section class="slide">
+      <h2>Starting from scratch</h2>
+
+      <ul>
+        <li>Install Pathogen</li>
+        <li>Install tpope/vim-sensible</li>
+        <li>Don't verbatim copy others vimrc</li>
+      </ul>
+
+      <h3>Your first ~/.vimrc</h3>
+      <pre><code data-lang>
+        |execute pathogen#infect()
+        |syntax on
+        |filetype plugin indent on
+      </code></pre>
+    </section>
+
+    <section class="slide">
+      <h2>Modes</h2>
+
+      <ul>
+        <li>
+          <strong>Normal</strong>
+          &rarr; Navigating a file. Small changes.
+        </li>
+
+        <li>
+          <strong>Visual</strong>
+          &rarr; Select blocks of text for copy/paste/manipulation.
+        </li>
+
+        <li>
+          <strong>Insert</strong>
+          &rarr; Insert text at cursor.
+        </li>
+      </ul>
+
+      <img src="modes.gif">
+    </section>
+
+    <section class="slide">
+      <h2>Moving Around</h2>
+
+      <p>Done in Normal/Visual mode</p>
+
+      <h3>Character by character</h3>
+      <p>
+        The "h", "j", "k", and "l" commands to move the cursor left, down,
+        up, and right respectively.
+      </p>
+
+      <h3>Word movement</h3>
+      <p>
+        The "w" command moves the cursor forward one word. Use numeric prefixes
+        to modify the command. Move three words forward using "3w".
+      </p>
+
+      <h3>Line movement</h3>
+      <p>
+        The "$" command moves cursor to end of line. The "^" command moves
+        cursor to the first non-blank character of the line. The "0" command
+        moves the cursor to the very first character of the line.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Operators and motions</h2>
+
+      <h3>Combine operator with motion</h3>
+      <p>"dw" to delete word</p>
+      <p>"d$" to delete to end of line</p>
+      <p>"cw" to change word</p>
+      <p>"c$" to change from cursor to end of line</p>
+    </section>
+
+    <section class="slide">
+      <h2>Visual mode</h2>
+
+      <p>Start visual mode with "v" or "V"</p>
+      <p>Pair with motions - "Vjj"</p>
+      <p>Delete "d" or "x"</p>
+      <p>Copy to clipboard</p>
+    </section>
+
     <section class="slide">
       <h2>Vim script (VimL)</h2>
 
